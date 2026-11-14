@@ -1,0 +1,70 @@
+# Creator Growth Agent — business profile (Community Edition)
+# Copy to business-profile.yaml (or private-profiles/*.local.yaml) and fill what you know.
+# All fields are optional unless a workflow explicitly needs them.
+# The agent must ASK for blocking missing info and must NEVER invent business data.
+
+profile_id: example-generic
+label: "Generic example business"
+synthetic: true                        # set false only for real owner data in private local files
+industry: other                        # free text or: saas | services | ecommerce | gaming_creator | other
+output_language: en                    # en | pt-BR | … (agent writes outputs in this language)
+
+business:
+  name: null
+  legal_name: null
+  one_liner: null
+  website: null
+  stage: null                          # idea | early | growth | mature
+  geography: null
+  founded_year: null
+
+offer:
+  primary: null
+  secondary: []
+  pricing_status: unknown              # unknown | hypothesis | validated | published
+  price_points: []                     # never invent; mark hypotheses explicitly
+  differentiators: []
+  proof_points: []                     # only verified items; no invented testimonials
+
+audience:
+  segments: []
+  icp_notes: null
+  anti_icp_notes: null
+
+channels:
+  owned: []                            # blog, youtube, email list, …
+  paid: []
+  preferred_outreach: []               # email, linkedin, …
+  never_auto_send: true                # Community Edition: always true
+
+brand:
+  voice: null
+  banned_claims: []
+  competitors_named_by_owner: []
+
+goals:
+  primary: null
+  north_star_metric: null
+  constraints: []
+
+compliance:
+  honor_opt_outs: true
+  invent_contacts: false
+  invent_metrics: false
+  require_human_approval_before_send: true
+  store_credentials_in_outputs: false
+
+scoring:                               # lead qualification defaults (0–100)
+  weights:
+    fit: 30
+    intent: 25
+    reachability: 20
+    timing: 15
+    data_quality: 10
+  # Weights should sum to 100. Agent must expose weights used in every score.
+
+data_sources:
+  approved: []                         # URLs/docs the owner allows the agent to use
+  last_reviewed: null                  # ISO date when owner last confirmed sources
+
+notes: null

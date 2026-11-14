@@ -1,0 +1,38 @@
+# SYNTHETIC / EXAMPLE ONLY — safe to commit.
+# Copy to hubclip.local.yaml (gitignored) for private Hub Clip owner use.
+# Do not put real emails, API keys, customer lists, or unpaid credentials here.
+
+profile_id: hubclip-private-template
+label: "SYNTHETIC Hub Clip-style creator profile (template)"
+synthetic: true
+industry: gaming_creator
+output_language: en
+
+business:
+  name: "Example Studio Clips"          # replace in hubclip.local.yaml
+  one_liner: "Helps creators ship short-form highlight clips faster"
+  website: "https://example.invalid/studio-clips"
+  stage: early
+  geography: "Global (English-speaking creators)"
+
+offer:
+  primary: "Clip packaging workflow for streamers"
+  pricing_status: hypothesis          # never treat as final published pricing
+  price_range_note: "Hypothesis only — validate before quoting"
+
+icp_seed:
+  roles: ["streamer", "creator manager", "small esports org ops"]
+  pains: ["clip backlog", "inconsistent highlight quality", "slow turnaround"]
+
+channels:
+  preferred: ["email", "linkedin", "discord_dm_with_consent"]
+  never_auto_send: true
+
+compliance:
+  honor_opt_outs: true
+  invent_contacts: false
+  require_human_approval_before_send: true
+
+notes: |
+  This file is a public template. Real Hub Clip data belongs only in
+  hubclip.local.yaml which must remain gitignored.

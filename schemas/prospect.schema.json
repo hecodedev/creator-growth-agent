@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creator-growth-agent.local/schemas/prospect.schema.json",
+  "title": "Prospect",
+  "type": "object",
+  "required": ["prospect_id", "synthetic", "display_name", "fields"],
+  "properties": {
+    "prospect_id": { "type": "string" },
+    "synthetic": { "type": "boolean" },
+    "display_name": { "type": "string" },
+    "opted_out": { "type": "boolean", "default": false },
+    "fields": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["value", "source", "date"],
+        "properties": {
+          "value": {},
+          "source": { "type": "string" },
+          "date": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "notes": { "type": ["string", "null"] }
+  }
+}

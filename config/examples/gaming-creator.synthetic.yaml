@@ -1,0 +1,72 @@
+# SYNTHETIC EXAMPLE — Hub Clip-style gaming/creator profile.
+# This is an EXAMPLE industry profile only — not product identity.
+profile_id: synth-gaming-creator
+label: "SYNTHETIC — PixelForge Clips (gaming creator tools)"
+synthetic: true
+industry: gaming_creator
+output_language: en
+
+business:
+  name: "PixelForge Clips"
+  one_liner: "Turns long VODs into share-ready highlight packages for indie streamers"
+  website: "https://example.invalid/pixelforge-clips"
+  stage: early
+  geography: "Global English-speaking creators"
+
+offer:
+  primary: "VOD-to-highlight packaging for streamers under 50k followers"
+  pricing_status: hypothesis
+  price_points:
+    - label: "Creator hypothesis"
+      amount: "USD 29/mo"
+      status: hypothesis
+  differentiators:
+    - "Templates tuned for common game genres (owner-stated)"
+  proof_points: []
+
+audience:
+  segments:
+    - "Indie Twitch/YouTube streamers"
+    - "Small creator managers"
+  icp_notes: "Creators who already clip manually at least weekly"
+  anti_icp_notes: "Tier-1 orgs needing broadcast truck integrations"
+
+channels:
+  owned: ["twitter_x", "discord_community", "youtube_tutorials"]
+  preferred_outreach: ["email", "twitter_x_dm_with_consent"]
+  never_auto_send: true
+
+brand:
+  voice: "Creator-fluent, practical, no corporate fluff"
+  banned_claims:
+    - "Guaranteed follower growth"
+    - "Official partner of major platforms"  # unvalidated
+
+goals:
+  primary: "Validate willingness-to-pay with 15 ICP interviews"
+  north_star_metric: "Completed discovery interviews with ICP creators"
+  constraints:
+    - "Never auto-send outreach"
+    - "Label all demo metrics as synthetic"
+
+compliance:
+  honor_opt_outs: true
+  invent_contacts: false
+  invent_metrics: false
+  require_human_approval_before_send: true
+  store_credentials_in_outputs: false
+
+scoring:
+  weights:
+    fit: 30
+    intent: 25
+    reachability: 20
+    timing: 15
+    data_quality: 10
+
+data_sources:
+  approved:
+    - "Synthetic portfolio fixtures under examples/"
+  last_reviewed: "2026-03-01"
+
+notes: "SYNTHETIC gaming/creator example. Not Hub Clip private data. Not product branding."

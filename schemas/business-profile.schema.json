@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creator-growth-agent.local/schemas/business-profile.schema.json",
+  "title": "BusinessProfile",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["profile_id"],
+  "properties": {
+    "profile_id": { "type": "string", "minLength": 1 },
+    "label": { "type": ["string", "null"] },
+    "synthetic": { "type": "boolean" },
+    "industry": { "type": ["string", "null"] },
+    "output_language": { "type": ["string", "null"] },
+    "business": { "type": ["object", "null"] },
+    "offer": { "type": ["object", "null"] },
+    "audience": { "type": ["object", "null"] },
+    "channels": {
+      "type": ["object", "null"],
+      "properties": {
+        "never_auto_send": { "const": true }
+      }
+    },
+    "brand": { "type": ["object", "null"] },
+    "goals": { "type": ["object", "null"] },
+    "compliance": {
+      "type": ["object", "null"],
+      "properties": {
+        "honor_opt_outs": { "type": "boolean" },
+        "invent_contacts": { "const": false },
+        "invent_metrics": { "const": false },
+        "require_human_approval_before_send": { "const": true },
+        "store_credentials_in_outputs": { "const": false }
+      }
+    },
+    "scoring": {
+      "type": ["object", "null"],
+      "properties": {
+        "weights": {
+          "type": "object",
+          "required": ["fit", "intent", "reachability", "timing", "data_quality"],
+          "properties": {
+            "fit": { "type": "number" },
+            "intent": { "type": "number" },
+            "reachability": { "type": "number" },
+            "timing": { "type": "number" },
+            "data_quality": { "type": "number" }
+          }
+        }
+      }
+    },
+    "data_sources": { "type": ["object", "null"] },
+    "notes": { "type": ["string", "null"] }
+  }
+}

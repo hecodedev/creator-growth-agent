@@ -1,0 +1,53 @@
+# Private business profiles — never commit real owner data
+private-profiles/*
+!private-profiles/.gitkeep
+!private-profiles/README.md
+!private-profiles/*.example.yaml
+
+# Explicit Hub Clip / local secrets pattern
+**/hubclip.local.yaml
+**/*.local.yaml
+!**/*.local.example.yaml
+
+# Secrets / env
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.key
+id_rsa
+id_ed25519
+credentials.json
+**/secrets/**
+
+# Runtime / agent scratch / local packages
+.cache/
+.tmp/
+*.log
+.data/
+dist/
+build/
+*.tar.gz
+!docs/**/*.tar.gz
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+*.code-workspace
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Node (if local tooling added later)
+node_modules/
+
+# Nested git / release tooling accidents
+**/.git/

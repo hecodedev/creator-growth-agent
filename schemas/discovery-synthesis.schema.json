@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creator-growth-agent.local/schemas/discovery-synthesis.schema.json",
+  "title": "DiscoverySynthesis",
+  "type": "object",
+  "required": ["synthetic", "insights", "pricing_status"],
+  "properties": {
+    "synthetic": { "type": "boolean" },
+    "interview_count_target": { "type": ["integer", "null"] },
+    "interview_count_completed": { "type": ["integer", "null"] },
+    "insights": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["statement", "kind", "source"],
+        "properties": {
+          "statement": { "type": "string" },
+          "kind": { "enum": ["observed", "inferred"] },
+          "source": { "type": "string" },
+          "date": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "pricing_status": {
+      "enum": ["unknown", "hypothesis", "validated", "published"]
+    },
+    "open_questions": { "type": "array", "items": { "type": "string" } }
+  }
+}

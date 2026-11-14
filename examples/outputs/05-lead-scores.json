@@ -1,0 +1,71 @@
+{
+  "synthetic": true,
+  "label": "SYNTHETIC lead scores for Northlane Ops portfolio demo",
+  "weights_used": {
+    "fit": 30,
+    "intent": 25,
+    "reachability": 20,
+    "timing": 15,
+    "data_quality": 10
+  },
+  "leads": [
+    {
+      "prospect_id": "synth-lead-001",
+      "display_name": "SYNTHETIC — Jordan Lee (Ops Lead, Cedar Facilities Group)",
+      "synthetic": true,
+      "opted_out": false,
+      "dimensions": {
+        "fit": { "score": 85, "rationale": "Multi-location facilities ops role matches ICP (owner-provided list)." },
+        "intent": { "score": 60, "rationale": "Public job post mentioning 'standardize site checklists' — SYNTHETIC fixture." },
+        "reachability": { "score": 70, "rationale": "Work email provided by owner list; not invented." },
+        "timing": { "score": 55, "rationale": "Hiring ops coordinator suggests process change window — inference." },
+        "data_quality": { "score": 80, "rationale": "Owner-sourced contact + one public signal fixture." }
+      },
+      "composite": 71.0,
+      "bucket": "nurture",
+      "missing_data": ["budget authority", "current tool stack detail"],
+      "sources": [
+        { "field": "email", "source": "SYNTHETIC owner prospect list", "date": "2026-01-20" },
+        { "field": "intent_signal", "source": "SYNTHETIC fixture job-post.txt", "date": "2026-01-18" }
+      ]
+    },
+    {
+      "prospect_id": "synth-lead-002",
+      "display_name": "SYNTHETIC — Alex Kim (General Manager, single-site cafe)",
+      "synthetic": true,
+      "opted_out": false,
+      "dimensions": {
+        "fit": { "score": 20, "rationale": "Single-site — matches anti-ICP." },
+        "intent": { "score": 10, "rationale": "No process-standardization signal." },
+        "reachability": { "score": 50, "rationale": "Email unknown — channel not verified." },
+        "timing": { "score": 15, "rationale": "No trigger found." },
+        "data_quality": { "score": 40, "rationale": "Sparse record; email unknown." }
+      },
+      "composite": 24.5,
+      "bucket": "disqualify",
+      "missing_data": ["email", "location_count_confirmation"],
+      "sources": [
+        { "field": "role", "source": "SYNTHETIC owner prospect list", "date": "2026-01-20" }
+      ]
+    },
+    {
+      "prospect_id": "synth-lead-003",
+      "display_name": "SYNTHETIC — Sam Rivera (opted out)",
+      "synthetic": true,
+      "opted_out": true,
+      "dimensions": {
+        "fit": { "score": 0, "rationale": "Not scored for outreach — opted out." },
+        "intent": { "score": 0, "rationale": "Skipped." },
+        "reachability": { "score": 0, "rationale": "Skipped." },
+        "timing": { "score": 0, "rationale": "Skipped." },
+        "data_quality": { "score": 100, "rationale": "Opt-out recorded by owner on 2026-01-12." }
+      },
+      "composite": 0,
+      "bucket": "opted_out",
+      "missing_data": [],
+      "sources": [
+        { "field": "opt_out", "source": "SYNTHETIC owner opt-out log", "date": "2026-01-12" }
+      ]
+    }
+  ]
+}

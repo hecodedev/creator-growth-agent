@@ -1,0 +1,73 @@
+{
+  "synthetic": true,
+  "label": "SYNTHETIC leads for C-03 outreach and C-04 qualification",
+  "profile_id": "synth-c01-incomplete-saas",
+  "weights": {
+    "fit": 30,
+    "intent": 25,
+    "reachability": 20,
+    "timing": 15,
+    "data_quality": 10
+  },
+  "leads": [
+    {
+      "prospect_id": "c-lead-01",
+      "display_name": "SYNTHETIC — Riley Chen, Ops Manager, Maple Court Properties",
+      "opted_out": false,
+      "fields": {
+        "role": { "value": "Ops Manager", "source": "owner list", "date": "2026-11-01" },
+        "company_type": { "value": "property management, ~40 doors", "source": "owner list", "date": "2026-11-01" },
+        "email": { "value": "riley.chen@example.invalid", "source": "owner list", "date": "2026-11-01" },
+        "intent_signal": { "value": "Asked in owner intro call about consolidating tenant email threads", "source": "owner call notes", "date": "2026-11-05" },
+        "tool_stack": { "value": "unknown", "source": "—", "date": null }
+      }
+    },
+    {
+      "prospect_id": "c-lead-02",
+      "display_name": "SYNTHETIC — Morgan Blake, Founder, Blake Solo Rentals",
+      "opted_out": false,
+      "fields": {
+        "role": { "value": "Founder / landlord", "source": "owner list", "date": "2026-11-01" },
+        "company_type": { "value": "3 personal rental units", "source": "owner list", "date": "2026-11-01" },
+        "email": { "value": "morgan@example.invalid", "source": "owner list", "date": "2026-11-01" },
+        "intent_signal": { "value": "unknown", "source": "—", "date": null },
+        "tool_stack": { "value": "Gmail only", "source": "owner list note", "date": "2026-11-01" }
+      }
+    },
+    {
+      "prospect_id": "c-lead-03",
+      "display_name": "SYNTHETIC — Casey Ng, Regional Director, North Pier Housing",
+      "opted_out": false,
+      "fields": {
+        "role": { "value": "Regional Director", "source": "owner list", "date": "2026-11-01" },
+        "company_type": { "value": "multi-site housing, 12 properties", "source": "owner list", "date": "2026-11-01" },
+        "email": { "value": "unknown", "source": "—", "date": null },
+        "intent_signal": { "value": "Public RFP mention of 'centralize resident communications' (fixture)", "source": "SYNTHETIC fixture rfp-note.txt", "date": "2026-10-20" },
+        "linkedin": { "value": "unknown", "source": "—", "date": null }
+      }
+    },
+    {
+      "prospect_id": "c-lead-04",
+      "display_name": "SYNTHETIC — Taylor Brooks, Marketing Intern, SoftLeaf Co",
+      "opted_out": false,
+      "fields": {
+        "role": { "value": "Marketing Intern", "source": "owner list", "date": "2026-11-01" },
+        "company_type": { "value": "DTC skincare brand (not property management)", "source": "owner list", "date": "2026-11-01" },
+        "email": { "value": "taylor@example.invalid", "source": "owner list", "date": "2026-11-01" },
+        "intent_signal": { "value": "none", "source": "owner list", "date": "2026-11-01" }
+      }
+    },
+    {
+      "prospect_id": "c-lead-05",
+      "display_name": "SYNTHETIC — Jordan Ames (opted out)",
+      "opted_out": true,
+      "fields": {
+        "role": { "value": "PM Ops Lead", "source": "owner list", "date": "2026-11-01" },
+        "company_type": { "value": "property management, ~80 doors", "source": "owner list", "date": "2026-11-01" },
+        "email": { "value": "jordan.ames@example.invalid", "source": "owner list", "date": "2026-11-01" },
+        "opt_out": { "value": true, "source": "owner opt-out log", "date": "2026-10-02" },
+        "intent_signal": { "value": "Previously requested no further promotional email", "source": "owner opt-out log", "date": "2026-10-02" }
+      }
+    }
+  ]
+}

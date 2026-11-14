@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creator-growth-agent.local/schemas/icp.schema.json",
+  "title": "ICPSet",
+  "type": "object",
+  "required": ["synthetic", "primary_icp_id", "icps"],
+  "properties": {
+    "synthetic": { "type": "boolean" },
+    "primary_icp_id": { "type": "string" },
+    "icps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "who", "pains", "disqualifiers"],
+        "properties": {
+          "id": { "type": "string" },
+          "who": { "type": "string" },
+          "context": { "type": ["string", "null"] },
+          "pains": { "type": "array", "items": { "type": "string" } },
+          "triggers": { "type": "array", "items": { "type": "string" } },
+          "success_criteria": { "type": "array", "items": { "type": "string" } },
+          "disqualifiers": { "type": "array", "items": { "type": "string" } },
+          "attribute_basis": {
+            "type": "object",
+            "additionalProperties": {
+              "enum": ["owner-stated", "evidence", "hypothesis"]
+            }
+          }
+        }
+      }
+    },
+    "anti_icp_notes": { "type": ["string", "null"] }
+  }
+}

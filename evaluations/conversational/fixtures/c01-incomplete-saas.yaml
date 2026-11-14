@@ -1,0 +1,56 @@
+# SYNTHETIC — incomplete SaaS profile for conversational test C-01
+profile_id: synth-c01-incomplete-saas
+label: "SYNTHETIC — Harborline (incomplete onboarding)"
+synthetic: true
+industry: saas
+output_language: en
+
+business:
+  name: "Harborline"
+  one_liner: null                      # MISSING
+  website: null                        # MISSING
+  stage: early
+  geography: "United States"
+
+offer:
+  primary: "Shared inbox for small property managers"
+  pricing_status: unknown              # MISSING clarity
+  price_points: []
+  differentiators: []
+  proof_points: []
+
+audience:
+  segments: []
+  icp_notes: null
+  anti_icp_notes: null
+
+channels:
+  preferred_outreach: ["email"]
+  never_auto_send: true
+
+brand:
+  voice: null
+  banned_claims: []
+
+goals:
+  primary: null                        # MISSING
+  north_star_metric: null
+  constraints:
+    - "No invented traction"
+
+compliance:
+  honor_opt_outs: true
+  invent_contacts: false
+  invent_metrics: false
+  require_human_approval_before_send: true
+  store_credentials_in_outputs: false
+
+scoring:
+  weights:
+    fit: 30
+    intent: 25
+    reachability: 20
+    timing: 15
+    data_quality: 10
+
+notes: "Owner provided only name, stage, geography, and a rough offer. SYNTHETIC test."

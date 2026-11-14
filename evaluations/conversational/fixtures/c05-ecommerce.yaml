@@ -1,0 +1,64 @@
+# SYNTHETIC — e-commerce profile for industry portability test C-05
+profile_id: synth-c05-ecommerce
+label: "SYNTHETIC — Nestware Home (e-commerce)"
+synthetic: true
+industry: ecommerce
+output_language: en
+
+business:
+  name: "Nestware Home"
+  one_liner: "Direct-to-consumer modular shelving for small apartments"
+  website: "https://example.invalid/nestware"
+  stage: growth
+  geography: "United Kingdom"
+
+offer:
+  primary: "Modular wall shelving kits sold online"
+  pricing_status: hypothesis
+  price_points:
+    - label: "Starter kit hypothesis"
+      amount: "GBP 89"
+      status: hypothesis
+  differentiators:
+    - "Flat-pack kits sized for rental apartments (owner-stated)"
+  proof_points: []
+
+audience:
+  segments:
+    - "Renters in UK cities furnishing small flats"
+  icp_notes: "Shoppers who already buy home goods online"
+  anti_icp_notes: "B2B office fit-out contractors"
+
+channels:
+  owned: ["instagram", "email_list", "online_store"]
+  preferred_outreach: ["email"]
+  never_auto_send: true
+
+brand:
+  voice: "Warm, practical, no tech jargon"
+  banned_claims:
+    - "Guaranteed Instagram viral growth"
+    - "Enterprise SaaS features"
+
+goals:
+  primary: "Increase repeat purchase rate on shelving add-ons"
+  north_star_metric: "30-day repeat purchase rate"
+  constraints:
+    - "Do not describe the business as SaaS or video tooling"
+
+compliance:
+  honor_opt_outs: true
+  invent_contacts: false
+  invent_metrics: false
+  require_human_approval_before_send: true
+  store_credentials_in_outputs: false
+
+scoring:
+  weights:
+    fit: 30
+    intent: 25
+    reachability: 20
+    timing: 15
+    data_quality: 10
+
+notes: "SYNTHETIC e-commerce portability fixture. Must not assume SaaS or creator-video identity."

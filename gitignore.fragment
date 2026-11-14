@@ -1,0 +1,23 @@
+# Paste into a parent repository .gitignore when vendoring
+# creator-growth-agent/ as a subdirectory (defense in depth).
+# The kit also ships its own .gitignore which Git applies to nested paths.
+#
+# How to merge:
+# 1. Open your repository-root .gitignore
+# 2. Append this entire fragment (or the lines you need)
+# 3. Confirm `git check-ignore -v creator-growth-agent/private-profiles/hubclip.local.yaml`
+#    reports an ignore rule before you commit
+
+creator-growth-agent/private-profiles/*
+!creator-growth-agent/private-profiles/.gitkeep
+!creator-growth-agent/private-profiles/README.md
+!creator-growth-agent/private-profiles/*.example.yaml
+creator-growth-agent/**/hubclip.local.yaml
+creator-growth-agent/**/*.local.yaml
+!creator-growth-agent/**/*.local.example.yaml
+creator-growth-agent/.env
+creator-growth-agent/.env.*
+creator-growth-agent/.data/
+creator-growth-agent/**/secrets/
+creator-growth-agent/*.pem
+creator-growth-agent/*.key

@@ -1,0 +1,71 @@
+# SYNTHETIC EXAMPLE — not a real company. For demos and evaluation only.
+profile_id: synth-local-services
+label: "SYNTHETIC — BrightLane Home Care (local services)"
+synthetic: true
+industry: services
+output_language: pt-BR
+
+business:
+  name: "BrightLane Home Care"
+  one_liner: "Limpeza residencial recorrente para apartamentos em São Paulo"
+  website: "https://example.invalid/brightlane"
+  stage: growth
+  geography: "São Paulo, Brasil"
+
+offer:
+  primary: "Plano mensal de limpeza residencial"
+  pricing_status: hypothesis
+  price_points:
+    - label: "Hipotese studio/1 dorm"
+      amount: "BRL 280/visita"
+      status: hypothesis
+  differentiators:
+    - "Equipe fixa por cliente (afirmado pelo dono — nao validado publicamente)"
+  proof_points: []
+
+audience:
+  segments:
+    - "Profissionais 28–45 em apartamentos"
+    - "Families com criancas pequenas"
+  icp_notes: "Bairros com densidade de apartamentos e renda media-alta"
+  anti_icp_notes: "Obras pos-construcao e limpeza industrial"
+
+channels:
+  owned: ["instagram", "whatsapp_business", "google_business_profile"]
+  preferred_outreach: ["whatsapp_with_consent", "email"]
+  never_auto_send: true
+
+brand:
+  voice: "Acolhedor, direto, sem exageros"
+  banned_claims:
+    - "100% dos clientes renovam"
+    - "Melhor empresa de SP"
+
+goals:
+  primary: "Aumentar assinaturas mensais em bairros-alvo"
+  north_star_metric: "Novas assinaturas mensais qualificadas"
+  constraints:
+    - "Nao inventar depoimentos"
+    - "Respeitar opt-out e LGPD"
+
+compliance:
+  honor_opt_outs: true
+  invent_contacts: false
+  invent_metrics: false
+  require_human_approval_before_send: true
+  store_credentials_in_outputs: false
+
+scoring:
+  weights:
+    fit: 30
+    intent: 25
+    reachability: 20
+    timing: 15
+    data_quality: 10
+
+data_sources:
+  approved:
+    - "Owner briefing sintetico"
+  last_reviewed: "2026-02-01"
+
+notes: "Perfil SINTETICO para demonstracao. Idioma de saida: pt-BR."

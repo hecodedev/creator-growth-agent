@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creator-growth-agent.local/schemas/research-brief.schema.json",
+  "title": "ResearchBrief",
+  "type": "object",
+  "required": ["question", "findings", "sources", "synthetic"],
+  "properties": {
+    "synthetic": { "type": "boolean" },
+    "question": { "type": "string" },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["statement", "kind"],
+        "properties": {
+          "statement": { "type": "string" },
+          "kind": { "enum": ["evidence", "inference", "unknown"] }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "date"],
+        "properties": {
+          "label": { "type": "string" },
+          "url": { "type": ["string", "null"] },
+          "date": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "pricing_notes": {
+      "type": "string",
+      "description": "Must mark hypotheses vs validated pricing"
+    }
+  }
+}

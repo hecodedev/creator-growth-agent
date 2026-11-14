@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creator-growth-agent.local/schemas/positioning.schema.json",
+  "title": "Positioning",
+  "type": "object",
+  "required": ["synthetic", "recommended", "blocked_claims"],
+  "properties": {
+    "synthetic": { "type": "boolean" },
+    "recommended": {
+      "type": "object",
+      "required": ["statement"],
+      "properties": {
+        "statement": { "type": "string" },
+        "basis": { "enum": ["owner-stated", "evidence", "hypothesis"] }
+      }
+    },
+    "offer_components": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "pricing_status": {
+      "enum": ["unknown", "hypothesis", "validated", "published"]
+    },
+    "blocked_claims": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "messaging_pillars": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creator-growth-agent.local/schemas/outreach-draft.schema.json",
+  "title": "OutreachDraft",
+  "type": "object",
+  "required": [
+    "draft_id",
+    "prospect_id",
+    "synthetic",
+    "channel",
+    "body",
+    "send_status",
+    "approval_required"
+  ],
+  "properties": {
+    "draft_id": { "type": "string" },
+    "prospect_id": { "type": "string" },
+    "synthetic": { "type": "boolean" },
+    "channel": { "type": "string" },
+    "subject": { "type": ["string", "null"] },
+    "body": { "type": "string" },
+    "personalization_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["fact", "source", "date"],
+        "properties": {
+          "fact": { "type": "string" },
+          "source": { "type": "string" },
+          "date": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "send_status": { "const": "draft_only" },
+    "approval_required": { "const": true },
+    "approver": { "type": ["string", "null"] },
+    "approved_at": { "type": ["string", "null"] },
+    "contains_credentials": { "const": false }
+  }
+}

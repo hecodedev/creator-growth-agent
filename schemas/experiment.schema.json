@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creator-growth-agent.local/schemas/experiment.schema.json",
+  "title": "Experiment",
+  "type": "object",
+  "required": [
+    "experiment_id",
+    "synthetic",
+    "hypothesis",
+    "primary_metric",
+    "target",
+    "status"
+  ],
+  "properties": {
+    "experiment_id": { "type": "string" },
+    "synthetic": { "type": "boolean" },
+    "hypothesis": { "type": "string" },
+    "primary_metric": { "type": "string" },
+    "target": { "type": ["number", "string"] },
+    "result": {
+      "type": ["number", "string", "null"],
+      "description": "Separate from target; null until measured"
+    },
+    "guardrail_metrics": { "type": "array", "items": { "type": "string" } },
+    "decision_criteria": { "type": ["string", "null"] },
+    "decision": {
+      "enum": ["pending", "ship", "iterate", "kill", "inconclusive"]
+    },
+    "status": { "enum": ["planned", "running", "completed", "aborted"] },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "note"],
+        "properties": {
+          "date": { "type": "string" },
+          "note": { "type": "string" }
+        }
+      }
+    }
+  }
+}

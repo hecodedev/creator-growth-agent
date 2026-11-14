@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creator-growth-agent.local/schemas/lead-score.schema.json",
+  "title": "LeadScore",
+  "type": "object",
+  "required": [
+    "prospect_id",
+    "synthetic",
+    "weights",
+    "dimensions",
+    "composite",
+    "bucket"
+  ],
+  "properties": {
+    "prospect_id": { "type": "string" },
+    "synthetic": { "type": "boolean" },
+    "opted_out": { "type": "boolean" },
+    "weights": {
+      "type": "object",
+      "required": ["fit", "intent", "reachability", "timing", "data_quality"],
+      "properties": {
+        "fit": { "type": "number" },
+        "intent": { "type": "number" },
+        "reachability": { "type": "number" },
+        "timing": { "type": "number" },
+        "data_quality": { "type": "number" }
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "required": ["fit", "intent", "reachability", "timing", "data_quality"],
+      "properties": {
+        "fit": { "$ref": "#/$defs/dim" },
+        "intent": { "$ref": "#/$defs/dim" },
+        "reachability": { "$ref": "#/$defs/dim" },
+        "timing": { "$ref": "#/$defs/dim" },
+        "data_quality": { "$ref": "#/$defs/dim" }
+      }
+    },
+    "composite": { "type": "number", "minimum": 0, "maximum": 100 },
+    "bucket": {
+      "enum": ["priority", "nurture", "low", "disqualify", "opted_out"]
+    },
+    "missing_data": { "type": "array", "items": { "type": "string" } }
+  },
+  "$defs": {
+    "dim": {
+      "type": "object",
+      "required": ["score", "rationale"],
+      "properties": {
+        "score": { "type": "number", "minimum": 0, "maximum": 100 },
+        "rationale": { "type": "string" }
+      }
+    }
+  }
+}

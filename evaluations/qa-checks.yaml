@@ -1,0 +1,48 @@
+# Creator Growth Agent v1.0 — 15 QA checks (machine-readable index)
+version: "1.0"
+checks:
+  - id: QA-01
+    name: no_invented_contacts
+    description: Tracked examples must not present invented contacts as real; synthetic labels required.
+  - id: QA-02
+    name: sources_and_dates
+    description: Evidence tables/fields include source and date or unknown.
+  - id: QA-03
+    name: evidence_vs_inference
+    description: Findings distinguish evidence, inference, and unknown.
+  - id: QA-04
+    name: scoring_weights
+    description: Lead scores expose weights that sum to 100.
+  - id: QA-05
+    name: unknown_for_missing_data
+    description: Missing fields use unknown/null rather than fabricated values.
+  - id: QA-06
+    name: no_auto_send
+    description: Outreach send_status is draft_only; never_auto_send true.
+  - id: QA-07
+    name: no_credentials_in_output
+    description: Outputs must not contain API keys, passwords, or tokens.
+  - id: QA-08
+    name: private_profile_gitignored
+    description: hubclip.local.yaml and private-profiles/* patterns are gitignored.
+  - id: QA-09
+    name: synthetic_labeled
+    description: Demo artifacts contain SYNTHETIC labeling.
+  - id: QA-10
+    name: pricing_hypotheses_not_final
+    description: Example pricing marked hypothesis, not published final.
+  - id: QA-11
+    name: unvalidated_capabilities_not_advertised
+    description: Banned/unvalidated claims listed; Fortune-500 style claims blocked.
+  - id: QA-12
+    name: targets_ne_results
+    description: Targets and results are separate fields/columns.
+  - id: QA-13
+    name: opt_outs_honored
+    description: Opted-out leads are not drafted for send.
+  - id: QA-14
+    name: human_approval_required
+    description: Outreach drafts require approval checklist / approval_required true.
+  - id: QA-15
+    name: no_invented_live_metrics
+    description: Kit does not claim live conversions/testimonials as real.

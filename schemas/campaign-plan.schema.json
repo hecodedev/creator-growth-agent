@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creator-growth-agent.local/schemas/campaign-plan.schema.json",
+  "title": "CampaignPlan",
+  "type": "object",
+  "required": ["synthetic", "job", "cta", "success_target", "assets"],
+  "properties": {
+    "synthetic": { "type": "boolean" },
+    "job": { "type": "string" },
+    "audience": { "type": ["string", "null"] },
+    "cta": { "type": "string" },
+    "success_target": {
+      "type": "object",
+      "required": ["metric", "target"],
+      "properties": {
+        "metric": { "type": "string" },
+        "target": { "type": ["number", "string"] },
+        "result": {
+          "description": "Must stay null/unknown until measured",
+          "type": ["number", "string", "null"]
+        }
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "channel", "brief"],
+        "properties": {
+          "title": { "type": "string" },
+          "channel": { "type": "string" },
+          "brief": { "type": "string" },
+          "blocked_claims": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

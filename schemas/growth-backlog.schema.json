@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creator-growth-agent.local/schemas/growth-backlog.schema.json",
+  "title": "GrowthBacklog",
+  "type": "object",
+  "required": ["synthetic", "items"],
+  "properties": {
+    "synthetic": { "type": "boolean" },
+    "horizon": { "type": ["string", "null"] },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["title", "evidence_basis", "success_signal", "kill_criterion"],
+        "properties": {
+          "title": { "type": "string" },
+          "evidence_basis": { "enum": ["evidence", "inference"] },
+          "impact": { "enum": ["high", "medium", "low", "unknown"] },
+          "confidence": { "enum": ["high", "medium", "low"] },
+          "effort": { "enum": ["high", "medium", "low", "unknown"] },
+          "success_signal": { "type": "string" },
+          "kill_criterion": { "type": "string" },
+          "requires_human_send_approval": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

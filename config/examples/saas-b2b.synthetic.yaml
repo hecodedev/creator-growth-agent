@@ -1,0 +1,71 @@
+# SYNTHETIC EXAMPLE — not a real company. For demos and evaluation only.
+profile_id: synth-saas-b2b
+label: "SYNTHETIC — Northlane Ops (B2B SaaS)"
+synthetic: true
+industry: saas
+output_language: en
+
+business:
+  name: "Northlane Ops"
+  one_liner: "Operations checklist software for multi-location service teams"
+  website: "https://example.invalid/northlane-ops"
+  stage: early
+  geography: "United States & Canada"
+
+offer:
+  primary: "Shared ops checklists + shift handoff logs"
+  pricing_status: hypothesis
+  price_points:
+    - label: "Team hypothesis"
+      amount: "USD 79/mo"
+      status: hypothesis
+  differentiators:
+    - "Built for multi-location handoffs (owner-stated)"
+  proof_points: []                     # none validated yet
+
+audience:
+  segments:
+    - "Regional facility managers"
+    - "Ops leads at 5–50 location service brands"
+  icp_notes: "Prefers teams already using Slack or email for shift notes"
+  anti_icp_notes: "Enterprise RFPs with custom SSO before product-market fit"
+
+channels:
+  owned: ["linkedin_company", "email_waitlist"]
+  preferred_outreach: ["email", "linkedin"]
+  never_auto_send: true
+
+brand:
+  voice: "Clear, practical, no hype"
+  banned_claims:
+    - "Guaranteed ROI"
+    - "Used by Fortune 500"            # unvalidated — must not advertise
+
+goals:
+  primary: "Book 8 discovery calls / month with ICP ops leads"
+  north_star_metric: "Qualified discovery calls booked"
+  constraints:
+    - "No cold calling"
+    - "Honor opt-outs immediately"
+
+compliance:
+  honor_opt_outs: true
+  invent_contacts: false
+  invent_metrics: false
+  require_human_approval_before_send: true
+  store_credentials_in_outputs: false
+
+scoring:
+  weights:
+    fit: 30
+    intent: 25
+    reachability: 20
+    timing: 15
+    data_quality: 10
+
+data_sources:
+  approved:
+    - "Owner interview notes (synthetic fixture)"
+  last_reviewed: "2026-01-15"
+
+notes: "SYNTHETIC portfolio demo profile. Do not treat metrics or contacts as real."
