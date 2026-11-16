@@ -1,0 +1,11 @@
+{
+  "name": "creator-growth-agent",
+  "private": true,
+  "workspaces": ["apps/web"],
+  "scripts": {
+    "qa452:install": "npm install --workspace @cga/web && (cd apps/api && python3 -m venv .venv && .venv/bin/pip install -e '.[dev]')",
+    "qa452:api": "cd apps/api && .venv/bin/uvicorn cga_api.main:app --host 127.0.0.1 --port 8452",
+    "qa452:web": "npm run dev --workspace @cga/web",
+    "qa452:e2e": "npm run qa452:e2e --workspace @cga/web"
+  }
+}
